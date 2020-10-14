@@ -14,8 +14,17 @@
            overflow-x: hidden;
           }
 
-          #b1 {
+          #b0 {
             background-color: white;
+            outline: 0;
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            border: 3px solid black;
+          }
+            
+          #b1 {
+            background-color: brown;
             outline: 0;
             padding: 10px;
             border-radius: 8px;
@@ -75,22 +84,23 @@
     </head>
     <body>
      <h4 id="clickCount">Clicks: 0</h4>
+        <div></div>
+        <h4 id="clicksPerClick">Clicks per click: 1</h4>
+        <div></div>
+            <h4 id="clicksPerSecond">Clicks per second: 0</h4>
+            <button id="b0" onclick="clicked()">Click me</button>
+        <div></div>
+            <button id="b1"onclick="clickAdder(0.2, 10)">10 clicks: +0.2 clicks</button>
+        <div></div>
+            <button id="b2" onclick="clickAdder(2, 100)">100 clicks: Extra Clicks</button>
+        <div></div>
+            <button id="b3" onclick="clickAdder(22, 10000)">10000 clicks: Super clicks</button>
     <div></div>
-    <h4 id="clicksPerClick">Clicks per click: 1</h4>
+        <button id="b4" onclick="cpsAdder(2, 1000)">1000 clicks: Automated clicks</button>
     <div></div>
-    <h4 id="clicksPerSecond">Clicks per second: 0</h4>
-    <button id="b1" onclick="clicked()">Click me</button>
+        <button id="b5" onclick="clickAdder(3000, 1000000)">1000000 clicks: Mega clicks</button>
     <div></div>
-    <button id="b2" onclick="clickAdder(2, 100)">100 clicks: Extra Clicks</button>
-    <div></div>
-    <button id="b3" onclick="clickAdder(22, 10000)">10000 clicks: Super clicks</button>
-    <script src="script.js"></script>
-    <div></div>
-    <button id="b4" onclick="cpsAdder(2, 1000)">1000 clicks: Automated clicks</button>
-    <div></div>
-    <button id="b5" onclick="clickAdder(3000, 1000000)">1000000 clicks: Mega clicks</button>
-    <div></div>
-    <button id="b6" onclick="cpsAdder(4000, 10000000)">10000000 clicks: Autoclicker</button>
+        <button id="b6" onclick="cpsAdder(4000, 10000000)">10000000 clicks: Autoclicker</button>
         <script>
           let clicks = 0;
           let cps = 0;
